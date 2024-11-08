@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ellie Chan</title>
+    <meta name="author" content="Ellie Chan">
+    <meta name="description" content="Ellie Chan's portfolio website">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-cube-32x32.png">
+</head>
+
+<body>
+    <header>
+        <div id="top-nav">
+            <a class="top-nav-link" href="index.html">Home</a>
+            <a class="top-nav-link" href="#projects">Projects</a>
+            <a class="top-nav-link" href="#courses">Learning</a>
+            <a class="top-nav-link" href="#contact">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="intro">
+            <p>Hello, I'm</p>
+            <h1 id="name">Ellie Chan</h1>
+            <p>I am a software engineering graduate at British Heart Foundation</p>
+        </section>
+    
+        <section id="projects">
+            <h1 class="section-title">My Projects</h1>
+
+            <div id="project-container" >
+                <div class="project-card">
+                    <img class="project-img" src="img/mini-game.jpg" alt="Portfolio Website demo"> 
+                    <p class="project-title">Portfolio Website</p>
+                    <p class="project-info">This is a portfolio website built with HTML, CSS and Javascript.</p>
+                    <img class="project-icon" src="img/github-mark-white.png" alt="Github Icon">
+                </div>
+
+                <div class="project-card">
+                    <img class="project-img" src="img/mini-game.jpg" alt="Mini Game demo"> 
+                    <p class="project-title">Mini Game</p>
+                    <p class="project-info">This is a mini game built with c#.</p>
+                    <img class="project-icon" src="img/github-mark-white.png" alt="Github Icon">
+                </div>
+
+                <div class="project-card">
+                    <img class="project-img" src="img/mini-game.jpg" alt="Coming soon demo"> 
+                    <p class="project-title">Coming Soon...</p>
+                    <p class="project-info">Coming soon...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="courses">
+            <h1 class="section-title">Learning Courses</h1>
+        </section>
+
+        <section id="contact">
+            <h1 class="section-title">Contact Me</h1>
+
+            <form method="post" action="" id="contact-form">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Enter your first name">
+                
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Enter your last name">
+            
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Enter your email">
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="10" placeholder="Enter your message"></textarea>
+                <input type="submit" value="Submit">
+            </form>
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>Author: Ellie Chan</p>
+    </footer>
+
+</body>
+
+</html>
