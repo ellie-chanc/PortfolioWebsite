@@ -3,12 +3,6 @@
     src: url(font/PlaywriteGBS-VariableFont_wght.ttf);
 }
 
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
 :root {
     --extra-dark: #062c43;
     --dark: #054569;
@@ -18,28 +12,54 @@
     --white: #ffffff;
 }
 
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: sans-serif;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 0px 5px var(--extra-dark);
+}
+
 #top-nav {
-    background-color: var(--light-blue);
-    padding: 5vh 5vw;
+    background-color: var(--white);
+    padding: 1vh 2vw;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-end;
-    column-gap: 2vw;
 }
 
 .top-nav-link {
+    padding: 1vh 2vw;
     text-decoration: none;
     font-size: 1rem;
     color: var(--extra-dark);
 }
 
 .top-nav-link:hover {
+    color: var(--light-blue);
+}
+
+#nav-contact {
+    background: linear-gradient(var(--extra-dark), var(--blue));
     color: var(--white);
+    border-radius: 10px;
+}
+
+#nav-contact:hover {
+    color: var(--light-blue);
 }
 
 #intro {
@@ -77,13 +97,27 @@ section {
 
 .project-card {
     width: 25vw;
-    height: 75vh;
+    height: 50vh;
     background: var(--dark);
-    border-radius: 2vh;
+    border-radius: 10px;
     padding: 1%;
     display: flex;
     flex-direction: column;
     row-gap: 2vh;
+}
+
+.project-card:hover {
+    box-shadow: 0px 0px 15px var(--blue);
+    transition-duration: 0.5s;
+}
+
+.project-card:hover .project-icon {
+    animation: flash 2s ease-in-out infinite alternate;
+}
+
+@keyframes flash {
+    0% {transform: rotate(0deg);}
+    100% {transform:rotate(360deg);}
 }
 
 .project-title {
@@ -98,13 +132,30 @@ section {
 .project-img {
     width: 100%; /* in percent of the containing block */
     height: 50%;
-    border-radius: 2vh;
+    border-radius: 10px;
     object-fit: cover;
+    object-position: center;
+}
+
+.project-card a {
+    display: block;
+    margin-top: auto;
+    width: 15%;
 }
 
 .project-icon {
-    width: 15%;
-    margin-top: auto;
+    width: 100%;
+    opacity: 50%;
+}
+
+.project-icon:hover {
+
+    opacity: 100%;
+}
+
+.project-icon.load {
+    rotate: 360deg;
+    transition-duration: 0.5s;
 }
 
 #courses {
@@ -136,7 +187,7 @@ textarea {
     border-style: solid;
     border-color: var(--light-grey);
     border-width: 0.5vh;
-    border-radius: 2vh;
+    border-radius: 10px;
     padding: 1%;
     resize: none;
 }
@@ -144,7 +195,7 @@ textarea {
 input[type=submit] {
     border-style: solid;
     border-color: var(--light-grey);
-    border-radius: 2vh;
+    border-radius: 10px;
     padding: 1% 2%;
     background-color: var(--light-grey);
 }
