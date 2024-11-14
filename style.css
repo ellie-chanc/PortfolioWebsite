@@ -10,6 +10,13 @@
     --light-blue: #9ccddc;
     --light-grey: #ced7e0;
     --white: #ffffff;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 600px) {
+    :root {
+        font-size: 20px;
+    }
 }
 
 * {
@@ -29,10 +36,10 @@ body {
 header {
     position: sticky;
     top: 0;
-    box-shadow: 0px 0px 5px var(--extra-dark);
 }
 
 #top-nav {
+    box-shadow: 0px 0px 5px var(--extra-dark);
     background-color: var(--white);
     padding: 1vh 2vw;
     display: flex;
@@ -41,7 +48,17 @@ header {
     justify-content: flex-end;
 }
 
-.top-nav-link {
+@media only screen and (max-width: 600px) {
+    #top-nav {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 2vh;
+        position: absolute;
+    }
+}
+
+.top-nav-item {
     padding: 1vh 2vw;
     text-decoration: none;
     font-size: 1rem;
@@ -52,35 +69,108 @@ header {
     color: var(--light-blue);
 }
 
+@media only screen and (max-width: 600px) {
+    .top-nav-link {
+        display: none;
+    }
+
+    .top-nav-link.active {
+        display: block;
+    }
+}
+
 #nav-contact {
-    background: linear-gradient(var(--extra-dark), var(--blue));
-    color: var(--white);
+    border: thin solid var(--extra-dark);
     border-radius: 10px;
 }
 
+@media only screen and (max-width: 600px) {
+    #nav-contact {
+        border: none;
+    }
+}
+
 #nav-contact:hover {
-    color: var(--light-blue);
+    background-color: var(--extra-dark);
+    color: var(--white);
+}
+
+@media only screen and (max-width: 600px) {
+    #nav-contact:hover {
+        background-color: var(--white);
+        color: var(--light-blue);
+    }
+}
+
+#hamburger {
+    display: none;
+}
+
+#hamburger.active #hamburger-1{
+    visibility: hidden;
+}
+
+#hamburger.active #hamburger-2{
+    display: block;
+}
+
+#hamburger.active #hamburger-3{
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+    #hamburger {
+        display: block;
+        align-self: flex-end;
+    }
+}
+
+.bar {
+    display: block;
+    width: 5vw;
+    height: 0.3vh;
+    margin: 0.5vh auto;
+    background-color: var(--extra-dark);
 }
 
 #intro {
     padding: 25vh 10vw;
     background-color: var(--white);
     color: var(--extra-dark);
-    font-size: 1.2rem;
+    font-size: 1rem;
+    text-align: center;
 }
 
 #name {
     font-family: PlaywriteGBS, sans-serif;
-    font-size: 6rem;
+    font-size: 5rem;
+}
+
+@media only screen and (max-width: 600px) {
+    #name {
+        font-size: 2.5rem;
+    }
 }
 
 section {
     padding: 20vh 5vw;
 }
 
+@media only screen and (max-width: 600px) {
+    section {
+        padding: 10vh 5vw;
+    }
+}
+
 .section-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     padding-bottom: 10vh;
+}
+
+@media only screen and (max-width: 600px) {
+    .section-title {
+        padding-bottom: 5vh;
+    }
 }
 
 #projects {
@@ -92,12 +182,12 @@ section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    row-gap: 5vh;
 }
 
 .project-card {
     width: 25vw;
-    height: 50vh;
     background: var(--dark);
     border-radius: 10px;
     padding: 1%;
@@ -106,16 +196,23 @@ section {
     row-gap: 2vh;
 }
 
+@media only screen and (max-width: 600px) {
+    .project-card {
+        width: 100%;
+        padding: 2%;
+    }
+}
+
 .project-card:hover {
     box-shadow: 0px 0px 15px var(--blue);
     transition-duration: 0.5s;
 }
 
 .project-card:hover .project-icon {
-    animation: flash 2s ease-in-out infinite alternate;
+    animation: spin 2s ease-in-out infinite alternate;
 }
 
-@keyframes flash {
+@keyframes spin {
     0% {transform: rotate(0deg);}
     100% {transform:rotate(360deg);}
 }
@@ -131,7 +228,6 @@ section {
 
 .project-img {
     width: 100%; /* in percent of the containing block */
-    height: 50%;
     border-radius: 10px;
     object-fit: cover;
     object-position: center;
@@ -149,13 +245,7 @@ section {
 }
 
 .project-icon:hover {
-
     opacity: 100%;
-}
-
-.project-icon.load {
-    rotate: 360deg;
-    transition-duration: 0.5s;
 }
 
 #courses {
@@ -181,15 +271,24 @@ section {
     row-gap: 2vh;
 }
 
+@media only screen and (max-width: 600px) {
+    #contact-form {
+        width: 80%;
+        row-gap: 1vh;
+    }
+}
+
 input[type=text],
 input[type=email],
 textarea {
     border-style: solid;
-    border-color: var(--light-grey);
-    border-width: 0.5vh;
+    border: medium solid var(--light-grey);
     border-radius: 10px;
     padding: 1%;
     resize: none;
+    font-size: 0.8rem;
+    font-family: sans-serif;
+    min-height: 10vh;
 }
 
 input[type=submit] {
@@ -198,6 +297,9 @@ input[type=submit] {
     border-radius: 10px;
     padding: 1% 2%;
     background-color: var(--light-grey);
+    color: var(--extra-dark);
+    font-size: 0.8rem;
+    height: 10vh;
 }
 
 input[type=submit]:hover {
@@ -209,4 +311,5 @@ footer {
     padding: 5vh 5vw;
     background-color: var(--light-blue);
     color: var(--extra-dark);
+    font-size: 1rem;
 }

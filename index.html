@@ -8,17 +8,22 @@
     <meta name="description" content="Ellie Chan's portfolio website">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-cube-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.ico">
 </head>
 
 <body>
     <header>
-        <div id="top-nav">
-            <a id="nav-intro" class="top-nav-link" href="#intro">About</a>
-            <a id="nav-projects" class="top-nav-link" href="#projects">Projects</a>
-            <a id="nav-courses" class="top-nav-link" href="#courses">Learning</a>
-            <a id="nav-contact" class="top-nav-link" href="#contact">Contact</a>
-        </div>
+        <nav id="top-nav">
+            <div id="hamburger" class="top-nav-item">
+                <div id="hamburger-1" class="bar"></div>
+                <div id="hamburger-2" class="bar"></div>
+                <div id="hamburger-3" class="bar"></div>
+            </div>
+            <a id="nav-intro" class="top-nav-item top-nav-link" href="#intro">About</a>
+            <a id="nav-projects" class="top-nav-item top-nav-link" href="#projects">Projects</a>
+            <a id="nav-courses" class="top-nav-item top-nav-link" href="#courses">Learning</a>
+            <a id="nav-contact" class="top-nav-item top-nav-link" href="#contact">Contact</a>
+        </nav>
     </header>
 
     <main>
@@ -32,30 +37,36 @@
             <h1 class="section-title">My Projects</h1>
 
             <div id="project-container" >
-                <div class="project-card">
+                <article class="project-card">
                     <img class="project-img" src="img/mini-game.jpg" alt="Portfolio Website demo"> 
-                    <p class="project-title">Portfolio Website</p>
+                    <h2 class="project-title">Portfolio Website</h2>
                     <p class="project-info">This is a portfolio website built with HTML, CSS and Javascript.</p>
                     <a href="https://github.com/ellie-chanc/PortfolioWebsite" target=”_blank”><img class="project-icon" src="img/github-mark-white.png" alt="Github Icon"></a>
-                </div>
+                </article>
 
-                <div class="project-card">
+                <article class="project-card">
                     <img class="project-img" src="img/mini-game.jpg" alt="Mini Game demo"> 
-                    <p class="project-title">Mini Game</p>
+                    <h2 class="project-title">Mini Game</h2>
                     <p class="project-info">This is a mini game built with c#.</p>
                     <a href="https://github.com/ellie-chanc/MiniGameV4/tree/master" target=”_blank”><img class="project-icon" src="img/github-mark-white.png" alt="Github Icon"></a>
-                </div>
+                </article>
 
-                <div class="project-card">
+                <article class="project-card">
                     <img class="project-img" src="img/mini-game.jpg" alt="Coming soon demo"> 
-                    <p class="project-title">Coming Soon...</p>
+                    <h2 class="project-title">Coming Soon...</h2>
                     <p class="project-info">Coming soon...</p>
-                </div>
+                </article>
             </div>
         </section>
 
         <section id="courses">
             <h1 class="section-title">Learning Courses</h1>
+
+            <div id="course-container">
+                <article class="course-card">
+                    
+                </article>
+            </div>
         </section>
 
         <section id="contact">
@@ -85,5 +96,6 @@
     </footer>
 
 </body>
+<script src="index.js"></script>
 
 </html>
