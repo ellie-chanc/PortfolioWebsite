@@ -79,29 +79,6 @@ header {
     }
 }
 
-#nav-contact {
-    border: thin solid var(--extra-dark);
-    border-radius: 10px;
-}
-
-@media only screen and (max-width: 600px) {
-    #nav-contact {
-        border: none;
-    }
-}
-
-#nav-contact:hover {
-    background-color: var(--extra-dark);
-    color: var(--white);
-}
-
-@media only screen and (max-width: 600px) {
-    #nav-contact:hover {
-        background-color: var(--white);
-        color: var(--light-blue);
-    }
-}
-
 #hamburger {
     display: none;
 }
@@ -231,6 +208,19 @@ section {
     border-radius: 10px;
     object-fit: cover;
     object-position: center;
+}
+
+.project-show-more {
+    display: none;
+    text-decoration: underline;
+    background-color: var(--dark);
+    border: none;
+    font-size: 1rem;
+    color: var(--light-blue);
+}
+
+.project-show-more:hover {
+    color: var(--light-grey);
 }
 
 .project-card a {
