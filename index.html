@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header>
+    <header id="top-header">
         <nav id="top-nav">
             <div id="hamburger" class="top-nav-item">
                 <div id="hamburger-1" class="bar"></div>
@@ -34,7 +34,9 @@
         </section>
     
         <section id="projects">
-            <h1 class="section-title">My Projects</h1>
+            <header id="project-header" class="main-header">
+                <h1 class="section-title">My Projects</h1>
+            </header>
 
             <div id="project-container" >
                 <article class="project-card">
@@ -63,17 +65,63 @@
         </section>
 
         <section id="courses">
-            <h1 class="section-title">Learning Courses</h1>
+            <header id="course-header" class="main-header">
+                <h1 class="section-title">Learning Courses</h1>
+                <img class="bookmark" src="img/bookmark.png">
+            </header>
 
             <div id="course-container">
-                <article class="course-card">
-                    
+                <article class="course-card" draggable="true">
+                    <h2 class="course-title">Foundational C# with Microsoft Certification</h2>
+                    <a class="course-link" href="https://www.freecodecamp.org/learn/foundational-c-sharp-with-microsoft/" target=”_blank”>Go to course</a>
+                </article>
+
+                <article class="course-card" draggable="true">
+                    <h2 class="course-title">Object-oriented Programming in C#</h2>
+                    <a class="course-link" href="https://app.pluralsight.com/library/courses/c-sharp-10-object-oriented-programming/table-of-contents" target=”_blank”>Go to course</a>
+                </article>
+
+                <article class="course-card" draggable="true">
+                    <h2 class="course-title">C# Advanced Topics: Prepare for Technical Interviews</h2>
+                    <a class="course-link" href="https://britishheartfoundation.udemy.com/course/csharp-advanced/" target=”_blank”>Go to course</a>
+                </article>
+
+                <article class="course-card" draggable="true">
+                    <h2 class="course-title">Introduction to SQL</h2>
+                    <a class="course-link" href="https://app.pluralsight.com/library/courses/introduction-to-sql/table-of-contents" target=”_blank”>Go to course</a>
+                </article>
+
+                <article class="course-card" draggable="true">
+                    <h2 class="course-title">SQL Server Fundamentals</h2>
+                    <a class="course-link" href="https://app.pluralsight.com/paths/skills/sql-server-fundamentals" target=”_blank”>Go to course</a>
+                </article>
+
+                <article class="course-card" draggable="true">
+                    <h2 class="course-title">Building Websites with HTML and CSS</h2>
+                    <a class="course-link" href="https://app.pluralsight.com/library/courses/html-css-building-websites/table-of-contents" target=”_blank”>Go to course</a>
+                </article>
+
+                <article class="course-card" draggable="true">
+                    <h2 class="course-title">CSS Advanced Features</h2>
+                    <a class="course-link" href="https://app.pluralsight.com/library/courses/css-advanced-features/table-of-contents" target=”_blank”>Go to course</a>
+                </article>
+
+                <article class="course-card" draggable="true">
+                    <h2 class="course-title">JavaScript Fundamentals</h2>
+                    <a class="course-link" href="https://app.pluralsight.com/library/courses/fundamentals-javascript/table-of-contents" target=”_blank”>Go to course</a>
+                </article>
+
+                <article class="course-card" draggable="true">
+                    <h2 class="course-title">JavaScript in the Browser</h2>
+                    <a class="course-link" href="https://app.pluralsight.com/library/courses/javascript-browser/table-of-contents" target=”_blank”>Go to course</a>
                 </article>
             </div>
         </section>
 
         <section id="contact">
-            <h1 class="section-title">Contact Me</h1>
+            <header id="contact-header" class="main-header">
+                <h1 class="section-title">Contact Me</h1>
+            </header>
 
             <form method="post" action="" id="contact-form">
                 <label for="first-name">First Name</label>

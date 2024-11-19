@@ -33,7 +33,7 @@ body {
     font-family: sans-serif;
 }
 
-header {
+#top-header {
     position: sticky;
     top: 0;
 }
@@ -139,9 +139,12 @@ section {
     }
 }
 
+.main-header {
+    padding-bottom: 10vh;
+}
+
 .section-title {
     font-size: 2.5rem;
-    padding-bottom: 10vh;
 }
 
 @media only screen and (max-width: 600px) {
@@ -212,15 +215,17 @@ section {
 
 .project-show-more {
     display: none;
-    text-decoration: underline;
-    background-color: var(--dark);
-    border: none;
+    background-color: var(--extra-dark);
     font-size: 1rem;
+    border: none;
+    border-radius: 10px;
     color: var(--light-blue);
+    padding: 1%;
 }
 
 .project-show-more:hover {
-    color: var(--light-grey);
+    background-color: var(--light-blue);
+    color: var(--extra-dark);
 }
 
 .project-card a {
@@ -243,12 +248,80 @@ section {
     color: var(--extra-dark);
 }
 
+#course-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#course-header .bookmark {
+    width: 5%;
+    object-fit: contain;
+}
+
+@media only screen and (max-width: 600px) {
+    #course-header .bookmark {
+        width: 15%;
+    }
+}
+
+#course-header .bookmark:hover {
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+
+#course-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 5vh;
+}
+
+.course-card {
+    width: 25vw;
+    background: var(--blue);
+    border-radius: 10px;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+}
+
+@media only screen and (max-width: 600px) {
+    .course-card {
+        width: 100%;
+        padding: 2%;
+    }
+}
+
+.course-card:hover {
+    box-shadow: 0px 0px 15px var(--blue);
+    transition-duration: 0.5s;
+}
+
+.course-link {
+    text-decoration: none;
+    color: var(--extra-dark);
+    background-color: var(--light-blue);
+    width: 100%;
+    border-radius: 10px;
+    padding: 1%;
+    text-align: center;
+    margin-top: auto;
+}
+
+.course-link:hover {
+    background-color: var(--extra-dark);
+    color: var(--light-blue);
+}
+
 #contact {
     background-color: var(--white);
     color: var(--extra-dark);
 }
 
-#contact > .section-title {
+#contact-header > .section-title {
     text-align: center;
 }
 
