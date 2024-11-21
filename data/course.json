@@ -1,0 +1,38 @@
+{
+    "1": {
+        "title": "Foundational C# with Microsoft Certification",
+        "url": "https://www.freecodecamp.org/learn/foundational-c-sharp-with-microsoft/"
+    },
+    "2": {
+        "title": "Object-oriented Programming in C#",
+        "url": "https://www.pluralsight.com/courses/c-sharp-10-object-oriented-programming/"
+    },
+    "3": {
+        "title": "C# Advanced Topics: Prepare for Technical Interviews",
+        "url": "https://www.udemy.com/course/csharp-advanced/"
+    },
+    "4": {
+        "title": "Introduction to SQL",
+        "url": "https://app.pluralsight.com/library/courses/introduction-to-sql/table-of-contents"
+    },
+    "5": {
+        "title": "SQL Server Fundamentals",
+        "url": "https://www.pluralsight.com/paths/sql-server-fundamentals"
+    },
+    "6": {
+        "title": "Building Websites with HTML and CSS",
+        "url": "https://www.pluralsight.com/courses/html-css-building-websites"
+    },
+    "7": {
+        "title": "CSS Advanced Features",
+        "url": "https://www.pluralsight.com/courses/css-advanced-features"
+    },
+    "8": {
+        "title": "JavaScript Fundamentals",
+        "url": "https://www.pluralsight.com/library/courses/fundamentals-javascript/"
+    },
+    "9": {
+        "title": "JavaScript in the Browser",
+        "url": "https://www.pluralsight.com/courses/javascript-browser"
+    }
+}

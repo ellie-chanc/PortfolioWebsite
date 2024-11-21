@@ -13,17 +13,7 @@
 
 <body>
     <header id="top-header">
-        <nav id="top-nav">
-            <div id="hamburger" class="top-nav-item">
-                <div id="hamburger-1" class="bar"></div>
-                <div id="hamburger-2" class="bar"></div>
-                <div id="hamburger-3" class="bar"></div>
-            </div>
-            <a id="nav-intro" class="top-nav-item top-nav-link" href="#intro">About</a>
-            <a id="nav-projects" class="top-nav-item top-nav-link" href="#projects">Projects</a>
-            <a id="nav-courses" class="top-nav-item top-nav-link" href="#courses">Learning</a>
-            <a id="nav-contact" class="top-nav-item top-nav-link" href="#contact">Contact</a>
-        </nav>
+        <nav id="top-nav"></nav>
     </header>
 
     <main>
@@ -38,30 +28,7 @@
                 <h1 class="section-title">My Projects</h1>
             </header>
 
-            <div id="project-container" >
-                <article class="project-card">
-                    <img class="project-img" src="img/mini-game.jpg" alt="Portfolio Website demo"> 
-                    <h2 class="project-title">Portfolio Website</h2>
-                    <p class="project-info">This is a portfolio website built with HTML, CSS and Javascript.</p>
-                    <button class="project-show-more">Show more</button>
-                    <a href="https://github.com/ellie-chanc/PortfolioWebsite" target=”_blank”><img class="project-icon" src="img/github-mark-white.png" alt="Github Icon"></a>
-                </article>
-
-                <article class="project-card">
-                    <img class="project-img" src="img/mini-game.jpg" alt="Mini Game demo"> 
-                    <h2 class="project-title">Mini Game</h2>
-                    <p class="project-info">This is a mini game built with c#.</p>
-                    <button class="project-show-more">Show more</button>
-                    <a href="https://github.com/ellie-chanc/MiniGameV4/tree/master" target=”_blank”><img class="project-icon" src="img/github-mark-white.png" alt="Github Icon"></a>
-                </article>
-
-                <article class="project-card">
-                    <img class="project-img" src="img/mini-game.jpg" alt="Coming soon demo"> 
-                    <h2 class="project-title">Coming Soon</h2>
-                    <p class="project-info">Coming soon</p>
-                    <button class="project-show-more">Show more</button>
-                </article>
-            </div>
+            <div id="project-container"></div>
         </section>
 
         <section id="courses">
@@ -70,52 +37,7 @@
                 <img class="bookmark" src="img/bookmark.png">
             </header>
 
-            <div id="course-container">
-                <article class="course-card" draggable="true">
-                    <h2 class="course-title">Foundational C# with Microsoft Certification</h2>
-                    <a class="course-link" href="https://www.freecodecamp.org/learn/foundational-c-sharp-with-microsoft/" target=”_blank”>Go to course</a>
-                </article>
-
-                <article class="course-card" draggable="true">
-                    <h2 class="course-title">Object-oriented Programming in C#</h2>
-                    <a class="course-link" href="https://app.pluralsight.com/library/courses/c-sharp-10-object-oriented-programming/table-of-contents" target=”_blank”>Go to course</a>
-                </article>
-
-                <article class="course-card" draggable="true">
-                    <h2 class="course-title">C# Advanced Topics: Prepare for Technical Interviews</h2>
-                    <a class="course-link" href="https://britishheartfoundation.udemy.com/course/csharp-advanced/" target=”_blank”>Go to course</a>
-                </article>
-
-                <article class="course-card" draggable="true">
-                    <h2 class="course-title">Introduction to SQL</h2>
-                    <a class="course-link" href="https://app.pluralsight.com/library/courses/introduction-to-sql/table-of-contents" target=”_blank”>Go to course</a>
-                </article>
-
-                <article class="course-card" draggable="true">
-                    <h2 class="course-title">SQL Server Fundamentals</h2>
-                    <a class="course-link" href="https://app.pluralsight.com/paths/skills/sql-server-fundamentals" target=”_blank”>Go to course</a>
-                </article>
-
-                <article class="course-card" draggable="true">
-                    <h2 class="course-title">Building Websites with HTML and CSS</h2>
-                    <a class="course-link" href="https://app.pluralsight.com/library/courses/html-css-building-websites/table-of-contents" target=”_blank”>Go to course</a>
-                </article>
-
-                <article class="course-card" draggable="true">
-                    <h2 class="course-title">CSS Advanced Features</h2>
-                    <a class="course-link" href="https://app.pluralsight.com/library/courses/css-advanced-features/table-of-contents" target=”_blank”>Go to course</a>
-                </article>
-
-                <article class="course-card" draggable="true">
-                    <h2 class="course-title">JavaScript Fundamentals</h2>
-                    <a class="course-link" href="https://app.pluralsight.com/library/courses/fundamentals-javascript/table-of-contents" target=”_blank”>Go to course</a>
-                </article>
-
-                <article class="course-card" draggable="true">
-                    <h2 class="course-title">JavaScript in the Browser</h2>
-                    <a class="course-link" href="https://app.pluralsight.com/library/courses/javascript-browser/table-of-contents" target=”_blank”>Go to course</a>
-                </article>
-            </div>
+            <div id="course-container"></div>
         </section>
 
         <section id="contact">
@@ -123,18 +45,18 @@
                 <h1 class="section-title">Contact Me</h1>
             </header>
 
-            <form method="post" action="" id="contact-form">
+            <form method="get" action="/index.html" onsubmit="return validateForm()" id="contact-form">
                 <label for="first-name">First Name</label>
-                <input type="text" id="first-name" name="first-name" placeholder="Enter your first name">
+                <input type="text" required id="first-name" name="first-name" placeholder="Enter your first name">
                 
                 <label for="last-name">Last Name</label>
-                <input type="text" id="last-name" name="last-name" placeholder="Enter your last name">
+                <input type="text" required id="last-name" name="last-name" placeholder="Enter your last name">
             
                 <label for="email">Email</label>
-                <input type="text" id="email" name="email" placeholder="Enter your email">
+                <input type="text" required id="email" name="email" placeholder="Enter your email">
 
                 <label for="message">Message</label>
-                <textarea id="message" name="message" rows="10" placeholder="Enter your message"></textarea>
+                <textarea id="message" required name="message" rows="10" placeholder="Enter your message"></textarea>
                 
                 <input type="submit" value="Submit">
             </form>
@@ -146,7 +68,7 @@
         <p>Author: Ellie Chan</p>
     </footer>
 
+    <script type="module" src="index.js"></script>
 </body>
-<script src="index.js"></script>
 
 </html>

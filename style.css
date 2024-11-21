@@ -188,7 +188,7 @@ section {
     transition-duration: 0.5s;
 }
 
-.project-card:hover .project-icon {
+.project-card:hover .project-github-icon {
     animation: spin 2s ease-in-out infinite alternate;
 }
 
@@ -228,19 +228,41 @@ section {
     color: var(--extra-dark);
 }
 
-.project-card a {
-    display: block;
-    margin-top: auto;
+.project-github-link {
     width: 15%;
 }
 
-.project-icon {
+.project-github-icon {
     width: 100%;
     opacity: 50%;
 }
 
-.project-icon:hover {
+.project-github-icon:hover {
     opacity: 100%;
+}
+
+.project-github-commit {
+    font-size: 1rem;
+    color: var(--light-blue);
+}
+
+.project-github-repo-name {
+    font-size: 1rem;
+    color: var(--light-blue);
+}
+
+.project-github-show-more {
+    background-color: var(--extra-dark);
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    color: var(--light-blue);
+    padding: 1%;
+}
+
+.project-github-show-more:hover {
+    background-color: var(--light-blue);
+    color: var(--extra-dark);
 }
 
 #courses {

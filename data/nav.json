@@ -1,0 +1,18 @@
+{
+    "1": {
+        "nav-link": "#intro",
+        "nav-text": "About"
+    },
+    "2": {
+        "nav-link": "#projects",
+        "nav-text": "Projects"
+    },
+    "3": {
+        "nav-link": "#courses",
+        "nav-text": "Learning"
+    },
+    "4": {
+        "nav-link": "#contact",
+        "nav-text": "Contact"
+    }
+}
