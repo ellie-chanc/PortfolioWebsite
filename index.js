@@ -29,34 +29,20 @@ courseBookmark.addEventListener("drop", function (event) {
     console.log(sessionStorage.getItem(`course-name-${numberOfBookmark}`));
 });
 
+hamburger.addEventListener("click", toggleMenu);
 
 async function getNav() {
     let navRes = await fetch("data/nav.json");
     let navObj = await navRes.json();
     let topNav = document.querySelector("#top-nav");
 
-    // hamburger
-    let navHamburger = document.createElement("div");
-    navHamburger.classList.add("top-nav-item");
-    navHamburger.setAttribute("id", "hamburger");
-    navHamburger.addEventListener("click", toggleMenu);
-    
-    for (let i = 0; i < 3; i++) {
-        let navHamburgerBar = document.createElement("div");
-        navHamburgerBar.classList.add("bar");
-        navHamburgerBar.setAttribute("id", `hamburger-${i+1}`);
-        navHamburger.appendChild(navHamburgerBar);
-    }
-
-    topNav.appendChild(navHamburger);
-
-    // nav link
     for (let i = 0; i < Object.keys(navObj).length; i++) {
         let navLink = document.createElement("a");
         navLink.classList.add("top-nav-item", "top-nav-link");
         navLink.setAttribute("href", navObj[i+1]["nav-link"]);
         navLink.innerText = navObj[i+1]["nav-text"];
         navLink.addEventListener("click", toggleMenu);
+
 
         topNav.appendChild(navLink);
     }
@@ -170,7 +156,7 @@ async function getCourse() {
 }
 
 
-function toggleMenu() {
+function toggleMenu(event) {
     hamburger.classList.toggle("active");
     for (let i = 0; i < allLink.length; i++) {
         allLink[i].classList.toggle("active");
