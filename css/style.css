@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 20px;
+}
+
+h1 {
+  color: yellow;
+}
+
+@media only screen and (min-width: 35rem) {
+  body {
+    font-size: 18px;
+  }
+  h1 {
+    color: #062c43;
+  }
+}
+@media only screen and (min-width: 60rem) {
+  body {
+    font-size: 16px;
+  }
+  h1 {
+    color: blue;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
