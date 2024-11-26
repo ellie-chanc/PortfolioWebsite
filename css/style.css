@@ -60,13 +60,13 @@ body {
   margin: 0.5vh auto;
   background-color: #062c43;
 }
-#top-header #top-nav #hamburger #hamburger.active #hamburger-1 {
+#top-header #top-nav #hamburger.active #hamburger-1 {
   visibility: hidden;
 }
-#top-header #top-nav #hamburger #hamburger.active #hamburger-2 {
+#top-header #top-nav #hamburger.active #hamburger-2 {
   display: block;
 }
-#top-header #top-nav #hamburger #hamburger.active #hamburger-3 {
+#top-header #top-nav #hamburger.active #hamburger-3 {
   visibility: hidden;
 }
 
