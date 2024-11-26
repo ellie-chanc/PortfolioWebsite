@@ -227,6 +227,9 @@ section .main-header .section-title {
   text-decoration: none;
   width: 100%;
 }
+#courses #course-container .course-card .course-link {
+  margin-top: auto;
+}
 #courses #course-container .course-card:hover {
   box-shadow: 0px 0px 15px #5591a9;
   transition-duration: 0.5s;
@@ -245,6 +248,7 @@ section .main-header .section-title {
   row-gap: 2vh;
   column-gap: 2vw;
   text-align: center;
+  margin: auto;
 }
 #contact #contact-form input[type=text],
 #contact #contact-form input[type=email],
@@ -284,10 +288,80 @@ footer {
   body {
     font-size: 18px;
   }
+  #top-header #top-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    row-gap: 2vh;
+    column-gap: 2vw;
+    text-align: center;
+  }
+  #top-header #top-nav .top-nav-link {
+    display: inline;
+  }
+  #top-header #top-nav #hamburger {
+    display: none;
+  }
+  #projects #project-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    row-gap: 2vh;
+    column-gap: 2vw;
+    text-align: center;
+  }
+  #projects #project-container .project-card {
+    width: 42vw;
+  }
+  #courses #course-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    row-gap: 2vh;
+    column-gap: 2vw;
+    text-align: center;
+  }
+  #courses #course-container .course-card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 2vh;
+    column-gap: 2vw;
+    text-align: center;
+    width: 42vw;
+  }
+  #contact #contact-form {
+    width: 75%;
+  }
 }
 @media only screen and (min-width: 62rem) {
   body {
     font-size: 16px;
+  }
+  #projects #project-container .project-card {
+    width: 25vw;
+  }
+  #courses #course-container .course-card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 2vh;
+    column-gap: 2vw;
+    text-align: center;
+    width: 25vw;
+  }
+  #contact #contact-form {
+    width: 50%;
   }
 }
 

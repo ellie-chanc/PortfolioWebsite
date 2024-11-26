@@ -9,8 +9,16 @@
     "2": {
         "img": "img/mini-game.jpg",
         "title": "Mini Game",
-        "info": "This is a mini game built with c#.",
+        "info": "This is a mini game built with c#, Microsoft SQL Server and Visual Studio. It is about moving the character to consume more food.",
         "github-url": "https://github.com/ellie-chanc/MiniGameV4/tree/master",
         "github-repo-name": "MiniGameV4"
+    },
+
+    "3": {
+        "img": "img/mini-game.jpg",
+        "title": "Coming Soon",
+        "info": "Coming soon...",
+        "github-url": "https://github.com/ellie-chanc/",
+        "github-repo-name": ""
     }
 }
