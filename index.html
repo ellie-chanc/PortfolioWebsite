@@ -8,6 +8,7 @@
     <meta name="description" content="Ellie Chan's portfolio website">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/2db5954b04.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.ico">
 </head>
 
@@ -39,8 +40,11 @@
 
         <section id="courses">
             <header id="course-header" class="main-header">
-                <h1 class="section-title">Learning Courses</h1>
-                <img class="bookmark" src="img/bookmark.png">
+                <h1 class="section-title">Learning</h1>
+                <div class="bookmark-container">
+                    <i class="bookmark-icon fa-solid fa-bookmark"></i>
+                    <p class="bookmark-text">Bookmark</p>
+                </div>
             </header>
 
             <div id="course-container"></div>
@@ -52,19 +56,19 @@
             </header>
 
             <form method="get" action="/index.html" onsubmit="return validateForm()" id="contact-form">
-                <label for="first-name">First Name</label>
+                <label for="first-name">First Name:</label>
                 <input type="text" required id="first-name" name="first-name" placeholder="Enter your first name">
                 
-                <label for="last-name">Last Name</label>
+                <label for="last-name">Last Name:</label>
                 <input type="text" required id="last-name" name="last-name" placeholder="Enter your last name">
             
-                <label for="email">Email</label>
+                <label for="email">Email:</label>
                 <input type="text" required id="email" name="email" placeholder="Enter your email">
 
-                <label for="message">Message</label>
-                <textarea id="message" required name="message" rows="10" placeholder="Enter your message"></textarea>
+                <label for="message">Message:</label>
+                <textarea id="message" required name="message" rows="5" placeholder="Enter your message"></textarea>
                 
-                <input type="submit" value="Submit">
+                <button><input type="submit" value="Submit"></button>
             </form>
             
         </section>

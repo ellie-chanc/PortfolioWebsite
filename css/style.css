@@ -1,39 +1,293 @@
 * {
   padding: 0;
   margin: 0;
-  font-size: 100%;
-}
-
-* {
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: PlaywriteGBS;
+  src: url(/font/PlaywriteGBS-VariableFont_wght.ttf);
+}
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-size: 20px;
+  font-family: sans-serif;
 }
 
-h1 {
-  color: yellow;
+#top-header {
+  position: sticky;
+  top: 0;
+}
+#top-header #top-nav {
+  width: 100%;
+  box-shadow: 0px 0px 5px #062c43;
+  background-color: #ffffff;
+  position: absolute;
+  padding: 1vh 2vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2vh;
+  column-gap: 2vw;
+  text-align: center;
+}
+#top-header #top-nav .top-nav-item {
+  text-decoration: none;
+  padding: 1vh 2vw;
+  color: #062c43;
+}
+#top-header #top-nav .top-nav-link {
+  display: none;
+}
+#top-header #top-nav .top-nav-link:hover {
+  color: #9ccddc;
+}
+#top-header #top-nav .top-nav-link.active {
+  display: block;
+}
+#top-header #top-nav #hamburger {
+  display: block;
+  align-self: flex-end;
+}
+#top-header #top-nav #hamburger .bar {
+  width: 5vw;
+  height: 0.3vh;
+  margin: 0.5vh auto;
+  background-color: #062c43;
+}
+#top-header #top-nav #hamburger #hamburger.active #hamburger-1 {
+  visibility: hidden;
+}
+#top-header #top-nav #hamburger #hamburger.active #hamburger-2 {
+  display: block;
+}
+#top-header #top-nav #hamburger #hamburger.active #hamburger-3 {
+  visibility: hidden;
 }
 
-@media only screen and (min-width: 35rem) {
+section {
+  padding: 10vh 5vw;
+}
+section .main-header {
+  padding: 2vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2vh;
+  column-gap: 2vw;
+  text-align: center;
+}
+section .main-header .section-title {
+  font-size: 2em;
+}
+
+#intro {
+  padding: 25vh 10vw;
+  background-color: #ffffff;
+  color: #062c43;
+  text-align: center;
+}
+#intro #name {
+  font-family: PlaywriteGBS, sans-serif;
+  font-size: 2.5em;
+}
+
+#projects {
+  background-color: #062c43;
+  color: #ced7e0;
+}
+#projects #project-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2vh;
+  column-gap: 2vw;
+  text-align: center;
+}
+#projects #project-container .project-card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2vh;
+  column-gap: 2vw;
+  text-align: center;
+  width: 100%;
+  background: #054569;
+  color: #ced7e0;
+  border-radius: 10px;
+  padding: 2%;
+}
+#projects #project-container .project-card .card-title {
+  font-size: 1.5em;
+}
+#projects #project-container .project-card .card-img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center;
+}
+#projects #project-container .project-card button, #projects #project-container .project-card .button {
+  background: #ced7e0;
+  color: #054569;
+  border: none;
+  border-radius: 10px;
+  padding: 2%;
+  text-align: center;
+  font-size: 1em;
+  text-decoration: none;
+  width: 100%;
+}
+#projects #project-container .project-card .project-show-more {
+  text-decoration: underline;
+  cursor: pointer;
+}
+#projects #project-container .project-card:hover {
+  box-shadow: 0px 0px 15px #5591a9;
+  transition-duration: 0.5s;
+}
+#projects #project-container .project-card:hover .project-github-icon {
+  animation: spin 2s ease-in-out infinite alternate;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#courses {
+  background-color: #ced7e0;
+  color: #062c43;
+}
+#courses .bookmark-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2vh;
+  column-gap: 2vw;
+  text-align: center;
+}
+#courses #course-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2vh;
+  column-gap: 2vw;
+  text-align: center;
+}
+#courses #course-container .course-card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2vh;
+  column-gap: 2vw;
+  text-align: center;
+  width: 100%;
+  background: #5591a9;
+  color: #062c43;
+  border-radius: 10px;
+  padding: 2%;
+}
+#courses #course-container .course-card .card-title {
+  font-size: 1.5em;
+}
+#courses #course-container .course-card .card-img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center;
+}
+#courses #course-container .course-card button, #courses #course-container .course-card .button {
+  background: #062c43;
+  color: #5591a9;
+  border: none;
+  border-radius: 10px;
+  padding: 2%;
+  text-align: center;
+  font-size: 1em;
+  text-decoration: none;
+  width: 100%;
+}
+#courses #course-container .course-card:hover {
+  box-shadow: 0px 0px 15px #5591a9;
+  transition-duration: 0.5s;
+}
+
+#contact {
+  background-color: #ffffff;
+  color: #062c43;
+}
+#contact #contact-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  row-gap: 2vh;
+  column-gap: 2vw;
+  text-align: center;
+}
+#contact #contact-form input[type=text],
+#contact #contact-form input[type=email],
+#contact #contact-form textarea {
+  width: 100%;
+  border: medium solid #ced7e0;
+  border-radius: 10px;
+  padding: 1%;
+  resize: none;
+  font-size: 1em;
+  font-family: sans-serif;
+}
+#contact #contact-form button {
+  background: #9ccddc;
+  color: #062c43;
+  border: none;
+  border-radius: 10px;
+  padding: 2%;
+  text-align: center;
+  font-size: 1em;
+  text-decoration: none;
+  width: 100%;
+}
+#contact #contact-form button input[type=submit] {
+  background: none;
+  border: none;
+  font-size: 1em;
+}
+
+footer {
+  padding: 5vh 5vw;
+  background-color: #9ccddc;
+  color: #062c43;
+}
+
+@media only screen and (min-width: 48rem) {
   body {
     font-size: 18px;
   }
-  h1 {
-    color: #062c43;
-  }
 }
-@media only screen and (min-width: 60rem) {
+@media only screen and (min-width: 62rem) {
   body {
     font-size: 16px;
-  }
-  h1 {
-    color: blue;
   }
 }
 
