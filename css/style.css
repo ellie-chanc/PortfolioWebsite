@@ -148,9 +148,8 @@ section .main-header .section-title {
   text-decoration: none;
   width: 100%;
 }
-#projects #project-container .project-card .project-show-more {
-  text-decoration: underline;
-  cursor: pointer;
+#projects #project-container .project-card button:hover, #projects #project-container .project-card .button:hover {
+  opacity: 50%;
 }
 #projects #project-container .project-card:hover {
   box-shadow: 0px 0px 15px #5591a9;
@@ -166,6 +165,10 @@ section .main-header .section-title {
   100% {
     transform: rotate(360deg);
   }
+}
+#projects #project-container .project-card .project-show-more {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 #courses {
@@ -227,12 +230,15 @@ section .main-header .section-title {
   text-decoration: none;
   width: 100%;
 }
-#courses #course-container .course-card .course-link {
-  margin-top: auto;
+#courses #course-container .course-card button:hover, #courses #course-container .course-card .button:hover {
+  opacity: 50%;
 }
 #courses #course-container .course-card:hover {
   box-shadow: 0px 0px 15px #5591a9;
   transition-duration: 0.5s;
+}
+#courses #course-container .course-card .course-link {
+  margin-top: auto;
 }
 
 #contact {
@@ -271,6 +277,9 @@ section .main-header .section-title {
   font-size: 1em;
   text-decoration: none;
   width: 100%;
+}
+#contact #contact-form button:hover {
+  opacity: 50%;
 }
 #contact #contact-form button input[type=submit] {
   background: none;

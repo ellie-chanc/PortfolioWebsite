@@ -50,8 +50,18 @@ async function getNav() {
 
 
 async function getProject() {
-    let projectListRes = await fetch("data/project.json");
-    let projectListObj = await projectListRes.json();
+    let projectListRes = {};
+    let projectListObj = {};
+    try {
+        projectListRes = await fetch("data/project.json");
+        projectListObj = await projectListRes.json();
+    } catch (err) {
+        console.log(`Error name: ${err.name}`);
+        console.log("Unable to get project details");
+        projectListRes = {};
+        projectListObj = {};
+    }
+
     let projectContainer = document.querySelector("#project-container");
 
     for (let i = 0; i < Object.keys(projectListObj).length; i++) {
@@ -100,8 +110,18 @@ async function getProject() {
 
 
 async function getCourse() {
-    let courseListRes = await fetch("data/course.json");
-    let courseListObj = await courseListRes.json();
+    let courseListRes = {};
+    let courseListObj = {};
+    try {
+        courseListRes = await fetch("data/course.json");
+        courseListObj = await courseListRes.json();
+    } catch (err) {
+        console.log(`Error name: ${err.name}`);
+        console.log("Unable to get course details");
+        courseListRes = {};
+        courseListObj = {};
+    }
+
     let courseContainer = document.querySelector("#course-container");
     
     for (let i = 0; i < Object.keys(courseListObj).length; i++) {
@@ -184,7 +204,6 @@ async function GetGithubCommit(repoName) {
         return commitRes["data"].length;
     } catch (err) {
         console.log(`Error name: ${err.name}`);
-        console.log(`Error message: ${err.message}`);
         console.log("Unable to get github commit");
         return 0;
     }

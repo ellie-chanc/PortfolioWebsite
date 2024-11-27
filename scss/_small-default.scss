@@ -15,6 +15,10 @@
     font-size: 1em;
     text-decoration: none;
     width: 100%;
+
+    &:hover {
+        opacity: 50%;
+    }
 }
 
 @mixin flex($direction: row, $align-items: center, $justify-content: center) {
@@ -87,15 +91,15 @@ body {
 
         .top-nav-link {
             display: none;
+
+            &:hover {
+                color: variable.$light-blue;
+            }
+
+            &.active {
+                display: block;
+            }
         }    
-
-        .top-nav-link:hover {
-            color: variable.$light-blue;
-        }
-
-        .top-nav-link.active {
-            display: block;
-        }
 
         #hamburger {
             display: block;
@@ -107,19 +111,19 @@ body {
                 margin: 0.5vh auto;
                 background-color: variable.$extra-dark;
             }
-        }
 
-        #hamburger.active {
-            #hamburger-1{
-                visibility: hidden;
-            }
-
-            #hamburger-2{
-                display: block;
-            }
-
-            #hamburger-3{
-                visibility: hidden;
+            &.active {
+                #hamburger-1{
+                    visibility: hidden;
+                }
+    
+                #hamburger-2{
+                    display: block;
+                }
+    
+                #hamburger-3{
+                    visibility: hidden;
+                }
             }
         }
     }
@@ -159,23 +163,23 @@ section {
 
         .project-card {
             @include card(variable.$dark, variable.$light-grey);
-            
+
+            &:hover {
+                @include card-hover(variable.$blue);
+    
+                .project-github-icon {
+                    animation: spin 2s ease-in-out infinite alternate;
+                }
+    
+                @keyframes spin {
+                    0% {transform: rotate(0deg);}
+                    100% {transform:rotate(360deg);}
+                }
+            }
+
             .project-show-more {
                 text-decoration: underline;
                 cursor: pointer;
-            }
-        }
-
-        .project-card:hover {
-            @include card-hover(variable.$blue);
-
-            .project-github-icon {
-                animation: spin 2s ease-in-out infinite alternate;
-            }
-
-            @keyframes spin {
-                0% {transform: rotate(0deg);}
-                100% {transform:rotate(360deg);}
             }
         }
     }
@@ -195,13 +199,13 @@ section {
         .course-card {
             @include card(variable.$blue, variable.$extra-dark);
 
+            &:hover {
+                @include card-hover(variable.$blue);
+            }
+
             .course-link {
                 margin-top: auto;
             }
-        }
-
-        .course-card:hover {
-            @include card-hover(variable.$blue);
         }
     }
 }
