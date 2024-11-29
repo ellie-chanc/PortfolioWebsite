@@ -3,22 +3,18 @@
         "img": "img/mini-game.jpg",
         "title": "Portfolio Website",
         "info": "This is a portfolio website built with HTML, CSS and Javascript.",
-        "github-url": "https://github.com/ellie-chanc/PortfolioWebsite",
-        "github-repo-name": "PortfolioWebsite"
+        "github-url": "https://github.com/ellie-chanc/PortfolioWebsite"
     },
     "2": {
         "img": "img/mini-game.jpg",
         "title": "Mini Game",
         "info": "This is a mini game built with c#, Microsoft SQL Server and Visual Studio. It is about moving the character to consume more food.",
-        "github-url": "https://github.com/ellie-chanc/MiniGameV4/tree/master",
-        "github-repo-name": "MiniGameV4"
+        "github-url": "https://github.com/ellie-chanc/MiniGameV4/tree/master"
     },
 
     "3": {
         "img": "img/mini-game.jpg",
         "title": "Coming Soon",
-        "info": "Coming soon...",
-        "github-url": "https://github.com/ellie-chanc/",
-        "github-repo-name": ""
+        "info": "Coming soon..."
     }
 }
