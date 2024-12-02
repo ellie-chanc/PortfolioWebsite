@@ -1,0 +1,14 @@
+@use "../abstracts" as *;
+
+section {
+    padding: 10vh $page-x-margin;
+
+    .main-header {
+        padding: 2vh;
+        @include flex(column);
+
+        .section-title {
+            font-size: 2em;
+        }
+    }
+}

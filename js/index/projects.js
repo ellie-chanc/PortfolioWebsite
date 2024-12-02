@@ -23,7 +23,7 @@ async function getProjects() {
             projectInfo = `<p class="project-info">${projectListObj[i]["info"]}</p>`;
         }
         let projectGithubLink = "github-url" in projectListObj[i] ? `<a href="${projectListObj[i]["github-url"]}" target="_blank" class="project-github-link button">Go to Github <i class="project-github-icon fa-brands fa-github"></i></a>` : "";
-        let projectCard = `<article class="project-card">${projectImg + projectTitle + projectInfo + projectGithubLink}</article>`;
+        let projectCard = `<article class="project-card card">${projectImg + projectTitle + projectInfo + projectGithubLink}</article>`;
         
         projectContainer.innerHTML += projectCard;
     }

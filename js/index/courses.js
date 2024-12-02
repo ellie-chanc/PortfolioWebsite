@@ -38,7 +38,7 @@ async function getCourses() {
     for (let i = 1; i <= Object.keys(courseListObj).length; i++) {
         let courseTitle = `<h2 class="course-title card-title">${courseListObj[i]["title"]}</h2>`;
         let courseLink = `<a href="${courseListObj[i]["url"]}" target="_blank" class="course-link button">Go to course <i class="course-link-icon fa-solid fa-arrow-up-right-from-square"></i></a>`;
-        let courseCard = `<article class="course-card" draggable="true">${courseTitle + courseLink}</article>`;
+        let courseCard = `<article class="course-card card" draggable="true">${courseTitle + courseLink}</article>`;
         
         courseContainer.innerHTML += courseCard;
     }

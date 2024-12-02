@@ -1,0 +1,16 @@
+@use "../abstracts" as *;
+
+button, .button {
+    @include text-bg($light-grey, $extra-dark);
+    border: none;
+    border-radius: $button-border-radius;
+    padding: 2%;
+    text-align: center;
+    font-size: 1em;
+    text-decoration: none;
+    width: 100%;
+
+    &:hover {
+        opacity: 50%;
+    }
+}

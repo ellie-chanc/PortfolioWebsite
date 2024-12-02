@@ -1,20 +1,141 @@
+@font-face {
+  font-family: PlaywriteGBS;
+  src: url(/font/PlaywriteGBS-VariableFont_wght.ttf);
+}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: PlaywriteGBS;
-  src: url(/font/PlaywriteGBS-VariableFont_wght.ttf);
+button, .button {
+  background: #062c43;
+  color: #ced7e0;
+  border: none;
+  border-radius: 10px;
+  padding: 2%;
+  text-align: center;
+  font-size: 1em;
+  text-decoration: none;
+  width: 100%;
 }
+button:hover, .button:hover {
+  opacity: 50%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2vh;
+  column-gap: 2vw;
+  text-align: center;
+  background: #054569;
+  color: #ced7e0;
+  width: 100%;
+  padding: 2%;
+  border-radius: 10px;
+}
+.card .card-title {
+  font-size: 1.5em;
+}
+.card .card-img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+@media only screen and (min-width: 48rem) {
+  .card {
+    width: 42vw;
+  }
+}
+@media only screen and (min-width: 62rem) {
+  .card {
+    width: 25vw;
+  }
+}
+
+footer {
+  padding: 5vh 5vw;
+  background-color: #9ccddc;
+  color: #062c43;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  row-gap: 2vh;
+  column-gap: 2vw;
+  text-align: center;
+  margin: auto;
+}
+form input[type=text],
+form input[type=email],
+form input[type=submit],
+form textarea {
+  width: 100%;
+  border: medium solid #ced7e0;
+  border-radius: 10px;
+  padding: 1%;
+  resize: none;
+  font-size: 1em;
+  font-family: sans-serif;
+}
+form input[type=submit] {
+  font-size: 1em;
+  border: none;
+}
+@media only screen and (min-width: 48rem) {
+  form {
+    width: 75%;
+  }
+}
+@media only screen and (min-width: 62rem) {
+  form {
+    width: 50%;
+  }
+}
+
+section {
+  padding: 10vh 5vw;
+}
+section .main-header {
+  padding: 2vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2vh;
+  column-gap: 2vw;
+  text-align: center;
+}
+section .main-header .section-title {
+  font-size: 2em;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-size: 20px;
   font-family: sans-serif;
+  font-size: 20px;
+}
+@media only screen and (min-width: 48rem) {
+  body {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 62rem) {
+  body {
+    font-size: 16px;
+  }
 }
 
 #top-header {
@@ -70,24 +191,6 @@ body {
   visibility: hidden;
 }
 
-section {
-  padding: 10vh 5vw;
-}
-section .main-header {
-  padding: 2vh;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  row-gap: 2vh;
-  column-gap: 2vw;
-  text-align: center;
-}
-section .main-header .section-title {
-  font-size: 2em;
-}
-
 #intro {
   padding: 25vh 10vw;
   background-color: #ffffff;
@@ -100,7 +203,7 @@ section .main-header .section-title {
 }
 
 #projects {
-  background-color: #062c43;
+  background: #062c43;
   color: #ced7e0;
 }
 #projects #project-container {
@@ -112,44 +215,6 @@ section .main-header .section-title {
   row-gap: 2vh;
   column-gap: 2vw;
   text-align: center;
-}
-#projects #project-container .project-card {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  row-gap: 2vh;
-  column-gap: 2vw;
-  text-align: center;
-  width: 100%;
-  background: #054569;
-  color: #ced7e0;
-  border-radius: 10px;
-  padding: 2%;
-}
-#projects #project-container .project-card .card-title {
-  font-size: 1.5em;
-}
-#projects #project-container .project-card .card-img {
-  width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-  object-position: center;
-}
-#projects #project-container .project-card button, #projects #project-container .project-card .button {
-  background: #ced7e0;
-  color: #054569;
-  border: none;
-  border-radius: 10px;
-  padding: 2%;
-  text-align: center;
-  font-size: 1em;
-  text-decoration: none;
-  width: 100%;
-}
-#projects #project-container .project-card button:hover, #projects #project-container .project-card .button:hover {
-  opacity: 50%;
 }
 #projects #project-container .project-card:hover {
   box-shadow: 0px 0px 15px #5591a9;
@@ -172,7 +237,7 @@ section .main-header .section-title {
 }
 
 #courses {
-  background-color: #ced7e0;
+  background: #ced7e0;
   color: #062c43;
 }
 #courses .bookmark-container {
@@ -195,44 +260,6 @@ section .main-header .section-title {
   column-gap: 2vw;
   text-align: center;
 }
-#courses #course-container .course-card {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  row-gap: 2vh;
-  column-gap: 2vw;
-  text-align: center;
-  width: 100%;
-  background: #5591a9;
-  color: #062c43;
-  border-radius: 10px;
-  padding: 2%;
-}
-#courses #course-container .course-card .card-title {
-  font-size: 1.5em;
-}
-#courses #course-container .course-card .card-img {
-  width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-  object-position: center;
-}
-#courses #course-container .course-card button, #courses #course-container .course-card .button {
-  background: #062c43;
-  color: #5591a9;
-  border: none;
-  border-radius: 10px;
-  padding: 2%;
-  text-align: center;
-  font-size: 1em;
-  text-decoration: none;
-  width: 100%;
-}
-#courses #course-container .course-card button:hover, #courses #course-container .course-card .button:hover {
-  opacity: 50%;
-}
 #courses #course-container .course-card:hover {
   box-shadow: 0px 0px 15px #5591a9;
   transition-duration: 0.5s;
@@ -242,61 +269,11 @@ section .main-header .section-title {
 }
 
 #contact {
-  background-color: #ffffff;
-  color: #062c43;
-}
-#contact #contact-form {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: center;
-  row-gap: 2vh;
-  column-gap: 2vw;
-  text-align: center;
-  margin: auto;
-}
-#contact #contact-form input[type=text],
-#contact #contact-form input[type=email],
-#contact #contact-form textarea {
-  width: 100%;
-  border: medium solid #ced7e0;
-  border-radius: 10px;
-  padding: 1%;
-  resize: none;
-  font-size: 1em;
-  font-family: sans-serif;
-}
-#contact #contact-form button {
-  background: #9ccddc;
-  color: #062c43;
-  border: none;
-  border-radius: 10px;
-  padding: 2%;
-  text-align: center;
-  font-size: 1em;
-  text-decoration: none;
-  width: 100%;
-}
-#contact #contact-form button:hover {
-  opacity: 50%;
-}
-#contact #contact-form button input[type=submit] {
-  background: none;
-  border: none;
-  font-size: 1em;
-}
-
-footer {
-  padding: 5vh 5vw;
-  background-color: #9ccddc;
+  background: #ffffff;
   color: #062c43;
 }
 
 @media only screen and (min-width: 48rem) {
-  body {
-    font-size: 18px;
-  }
   #top-header #top-nav {
     display: flex;
     flex-direction: row;
@@ -317,60 +294,21 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     row-gap: 2vh;
     column-gap: 2vw;
     text-align: center;
-  }
-  #projects #project-container .project-card {
-    width: 42vw;
   }
   #courses #course-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: stretch;
-    justify-content: space-between;
+    justify-content: center;
     row-gap: 2vh;
     column-gap: 2vw;
     text-align: center;
-  }
-  #courses #course-container .course-card {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start;
-    row-gap: 2vh;
-    column-gap: 2vw;
-    text-align: center;
-    width: 42vw;
-  }
-  #contact #contact-form {
-    width: 75%;
-  }
-}
-@media only screen and (min-width: 62rem) {
-  body {
-    font-size: 16px;
-  }
-  #projects #project-container .project-card {
-    width: 25vw;
-  }
-  #courses #course-container .course-card {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start;
-    row-gap: 2vh;
-    column-gap: 2vw;
-    text-align: center;
-    width: 25vw;
-  }
-  #contact #contact-form {
-    width: 50%;
   }
 }
 

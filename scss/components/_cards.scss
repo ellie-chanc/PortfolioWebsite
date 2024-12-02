@@ -1,0 +1,27 @@
+@use "../abstracts" as *;
+
+.card {
+    @include flex(column);
+    @include text-bg($light-grey, $dark);
+
+    width: 100%;
+    padding: $card-padding;
+    border-radius: $card-border-radius;
+
+    .card-title {
+        font-size: 1.5em;
+    }
+
+    .card-img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    @include for-screen-size(tablet) {
+        width: 42vw;
+    }
+    @include for-screen-size(desktop) {
+        width: 25vw;
+    }
+}

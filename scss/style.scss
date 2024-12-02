@@ -1,11 +1,7 @@
 // compile: sass scss/style.scss css/style.css
 
-@use "reset";
-
-@use "variable";
-
-@use "small-default";
-
-@use "medium";
-
-@use "large";
+@use "abstracts";
+@use "base";
+@use "components";
+@use "layout";
+@use "pages";
