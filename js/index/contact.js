@@ -1,13 +1,16 @@
-const email = document.querySelector("#contact-form-email");
+const contactFormInputs = document.querySelector("#contact-form").elements;
+const specialCharacters = /[?<>;]+/;
 
-email.addEventListener("input", () => {
-    const specialCharacters = /[?<>;]+/;
-    
-    if (specialCharacters.test(email.value)) {
-        email.setCustomValidity("Cannot contain special characters.");
-    } else if (email.validity.typeMismatch) {
-        email.setCustomValidity("Invalid email address.");
+for (let i = 0; i < contactFormInputs.length; i++) {
+    contactFormInputs[i].addEventListener("input", (event) => {    
+        checkSpecialCharacters(event.currentTarget);
+    });
+}
+
+function checkSpecialCharacters(element) {
+    if (specialCharacters.test(element.value)) {
+        element.setCustomValidity("Cannot contain special characters.");
     } else {
-        email.setCustomValidity("");
+        element.setCustomValidity("");
     }
-});
+}
