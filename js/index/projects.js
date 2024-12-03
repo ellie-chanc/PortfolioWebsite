@@ -18,12 +18,12 @@ async function getProjects() {
         let projectTitle = `<h2 class="project-title card-title">${projectListObj[i]["title"]}</h2>`;
         let projectInfo = ``;
         if (projectListObj[i]["info"].length > 50) {
-            projectInfo = `<p class="project-info">${projectListObj[i]["info"].substring(0, 50)}... <a class="project-show-more hide">Show More</a></p>`;
+            projectInfo = `<p class="project-info">${projectListObj[i]["info"].substring(0, 50)}... <a class="project-show-more show-more-link hide">Show More</a></p>`;
         } else {
             projectInfo = `<p class="project-info">${projectListObj[i]["info"]}</p>`;
         }
         let projectGithubLink = "github-url" in projectListObj[i] ? `<a href="${projectListObj[i]["github-url"]}" target="_blank" class="project-github-link button">Go to Github <i class="project-github-icon fa-brands fa-github"></i></a>` : "";
-        let projectCard = `<article class="project-card card">${projectImg + projectTitle + projectInfo + projectGithubLink}</article>`;
+        let projectCard = `<article class="project-card card">${projectImg + projectTitle + projectInfo}<div class="card-footer">${projectGithubLink}</div></article>`;
         
         projectContainer.innerHTML += projectCard;
     }

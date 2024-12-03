@@ -13,27 +13,3 @@
     column-gap: 2vw;
     text-align: center;
 }
-
-// @mixin card($background-color: $dark, $color: $white) {
-//     @include flex(column);
-
-//     width: 100%;
-//     background: $background-color;
-//     color: $color;
-//     padding: 2%;
-
-//     .card-title {
-//         font-size: 1.5em;
-//     }
-
-//     .card-img {
-//         width: 100%;
-//         object-fit: cover;
-//         object-position: center;
-//     }
-// }
-
-@mixin card-hover($shadow-color: $blue) {
-    box-shadow: 0px 0px 15px $shadow-color;
-    transition-duration: 0.5s;
-}

@@ -1,7 +1,7 @@
 $tablet-min-width: 48rem;
 $desktop-min-width: 62rem;
 
-@mixin for-screen-size($screen-size) {
+@mixin for-min-screen-size($screen-size) {
     @if $screen-size == tablet {
         @media only screen and (min-width: $tablet-min-width) {
             @content;

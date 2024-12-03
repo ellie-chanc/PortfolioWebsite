@@ -1,114 +1,43 @@
 @use "../abstracts" as *;
+@use "../base/typography" as *;
 
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: $default-font-family;
-    font-size: $default-font-size;
-    @include for-screen-size(tablet) {
-        font-size: $tablet-font-size;
-    }
-    @include for-screen-size(desktop) {
-        font-size: $desktop-font-size;
-    }
-}
-
-#top-header {
-    position: sticky;
-    top: 0;
-
-    #top-nav {
-        width: 100%;
-        box-shadow: 0px 0px 5px $extra-dark;
-        background-color: $white;
-        position: absolute;
-        padding: $top-nav-padding;
-        @include flex(column);
-
-        .top-nav-item {
-            text-decoration: none;
-            padding: $top-nav-padding;
-            color: $extra-dark;
-        }
-
-        .top-nav-link {
-            display: none;
-
-            &:hover {
-                color: $light-blue;
-            }
-
-            &.active {
-                display: block;
-            }
-        }    
-
-        #hamburger {
-            display: block;
-            align-self: flex-end;
-
-            .bar {
-                width: 5vw;
-                height: 0.3vh;
-                margin: 0.5vh auto;
-                background-color: $extra-dark;
-            }
-
-            &.active {
-                #hamburger-1{
-                    visibility: hidden;
-                }
-    
-                #hamburger-2{
-                    display: block;
-                }
-    
-                #hamburger-3{
-                    visibility: hidden;
-                }
-            }
-        }
-    }
+    @include responsive-font;
 }
 
 #intro {
-    padding: 25vh 10vw;
-    background-color: $white;
-    color: $extra-dark;
-    text-align: center;
+    @include text-bg($extra-dark, $white);
+    height: 90vh;
 
     #name {
         font-family: PlaywriteGBS, $default-font-family;
         font-size: 2.5em;
+
+        @include for-min-screen-size(tablet) {
+            font-size: 4em;
+        }
     }
 }
 
 #projects {
     @include text-bg($light-grey, $extra-dark);
 
+    .project-card:hover {
+        .project-github-icon {
+            animation: spin 2s ease-in-out infinite alternate;
+        }
 
-    #project-container {
-        @include flex(column);
-
-        .project-card {
-            &:hover {
-                @include card-hover($blue);
-    
-                .project-github-icon {
-                    animation: spin 2s ease-in-out infinite alternate;
-                }
-    
-                @keyframes spin {
-                    0% {transform: rotate(0deg);}
-                    100% {transform:rotate(360deg);}
-                }
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
             }
 
-            .project-show-more {
-                text-decoration: underline;
-                cursor: pointer;
+            100% {
+                transform: rotate(360deg);
             }
         }
     }
@@ -117,54 +46,11 @@ body {
 #courses {
     @include text-bg($extra-dark, $light-grey);
     
-
     .bookmark-container {
         @include flex(row);
-    }
-
-    #course-container {
-        @include flex(column);
-
-        .course-card {
-            &:hover {
-                @include card-hover($blue);
-            }
-
-            .course-link {
-                margin-top: auto;
-            }
-        }
     }
 }
 
 #contact {
     @include text-bg($extra-dark, $white);
-}
-
-@include for-screen-size(tablet) {
-    #top-header {
-        #top-nav {
-            @include flex(row, flex-end);
-    
-            .top-nav-link {
-                display: inline;
-            }    
-    
-            #hamburger {
-                display: none;
-            }
-        }
-    }
-
-    #projects {
-        #project-container {
-            @include flex(row, space-between);
-        }
-    }
-
-    #courses {
-        #course-container {
-            @include flex(row, center, stretch);
-        }
-    }
 }

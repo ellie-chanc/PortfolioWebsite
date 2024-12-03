@@ -1,0 +1,9 @@
+@use "../abstracts" as *;
+
+.card-container {
+    @include flex(column);
+
+    @include for-min-screen-size(tablet) {
+        @include flex(row, center, stretch);
+    }
+}

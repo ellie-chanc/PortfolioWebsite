@@ -8,9 +8,11 @@ button, .button {
     text-align: center;
     font-size: 1em;
     text-decoration: none;
+    display: inline-block;
     width: 100%;
 
     &:hover {
+        cursor: pointer;
         opacity: 50%;
     }
 }
