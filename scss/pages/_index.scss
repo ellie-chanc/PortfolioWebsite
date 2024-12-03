@@ -10,7 +10,9 @@ body {
 }
 
 #intro {
-    @include text-bg($extra-dark, $white);
+    @include text-bg($white, $dark);
+    background-image: url("/img/hk-night.jpg");
+    background-size: cover;
     height: 90vh;
 
     #name {

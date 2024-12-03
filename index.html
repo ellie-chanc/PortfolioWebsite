@@ -13,9 +13,9 @@
 </head>
 
 <body>
-    <header id="top-header" class="page-header">
-        <nav id="top-nav" class="top-nav">
-            <div id="hamburger" class="hamburger top-nav-item">
+    <header class="page-header">
+        <nav class="top-nav">
+            <div class="hamburger top-nav-item">
                 <div id="hamburger-1" class="bar"></div>
                 <div id="hamburger-2" class="bar"></div>
                 <div id="hamburger-3" class="bar"></div>
@@ -31,7 +31,7 @@
         </section>
     
         <section id="projects">
-            <header id="project-header" class="section-header">
+            <header class="section-header">
                 <h1 class="section-title">My Projects</h1>
             </header>
 
@@ -39,7 +39,7 @@
         </section>
 
         <section id="courses">
-            <header id="course-header" class="section-header">
+            <header class="section-header">
                 <h1 class="section-title">Learning</h1>
                 <div class="bookmark-container button">
                     <i class="bookmark-icon fa-solid fa-bookmark"></i>
@@ -51,22 +51,22 @@
         </section>
 
         <section id="contact">
-            <header id="contact-header" class="section-header">
+            <header class="section-header">
                 <h1 class="section-title">Contact Me</h1>
             </header>
 
-            <form method="get" action="/index.html" onsubmit="return validateForm()" id="contact-form">
-                <label for="first-name">First Name:</label>
-                <input type="text" required id="first-name" name="first-name" placeholder="Enter your first name">
+            <form method="POST" action="https://formspree.io/f/xgvedwra" id="contact-form">
+                <label for="contact-form-first-name">First Name:</label>
+                <input type="text" id="contact-form-first-name" name="first-name" placeholder="Enter your first name" required maxlength="50">
                 
-                <label for="last-name">Last Name:</label>
-                <input type="text" required id="last-name" name="last-name" placeholder="Enter your last name">
+                <label for="contact-form-last-name">Last Name:</label>
+                <input type="text" id="contact-form-last-name" name="last-name" placeholder="Enter your last name" required maxlength="50">
             
-                <label for="email">Email:</label>
-                <input type="text" required id="email" name="email" placeholder="Enter your email">
+                <label for="contact-form-email">Email:</label>
+                <input type="email" id="contact-form-email" name="email" placeholder="Enter your email" required maxlength="50">
 
-                <label for="message">Message:</label>
-                <textarea id="message" required name="message" rows="5" placeholder="Enter your message"></textarea>
+                <label for="contact-form-message">Message (maximum 250 characters):</label>
+                <textarea id="contact-form-message" name="message" rows="5" placeholder="Enter your message" required maxlength="200"></textarea>
                 
                 <input type="submit" value="Submit" class="button">
             </form>

@@ -5,7 +5,7 @@
     top: 0;
 
     .top-nav {
-        @include text-bg($extra-dark, $white);
+        @include text-bg($extra-dark, $light-blue);
         @include flex(column);
         position: absolute;
         width: 100%;
@@ -22,7 +22,7 @@
             display: none;
 
             &:hover {
-                color: $light-blue;
+                color: $blue;
             }
 
             &.active {
@@ -32,11 +32,12 @@
 
         .hamburger {
             display: block;
-            align-self: flex-end;
+            align-self: flex-start;
+            cursor: pointer;
 
             .bar {
                 width: 5vw;
-                height: 0.3vh;
+                height: 0.5vh;
                 margin: 0.5vh auto;
                 background-color: $extra-dark;
             }
@@ -59,7 +60,7 @@
 
     @include for-min-screen-size(tablet) {
         .top-nav {
-            @include flex(row, flex-end);
+            @include flex(row, flex-start);
     
             .top-nav-link {
                 display: inline;
