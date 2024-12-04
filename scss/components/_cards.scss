@@ -14,6 +14,7 @@
 
     .card-img {
         width: 100%;
+        height: 40vh;
         object-fit: cover;
         object-position: center;
         border-radius: $card-border-radius;
@@ -29,10 +30,10 @@
         transition-duration: 0.5s;
     }
 
-    @include for-min-screen-size(tablet) {
+    @include for-min-screen-size(medium) {
         width: 42vw;
     }
-    @include for-min-screen-size(desktop) {
+    @include for-min-screen-size(large) {
         width: 25vw;
     }
 }

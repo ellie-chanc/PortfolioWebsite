@@ -8,16 +8,16 @@ $default-font-family: sans-serif;
 }
 
 $default-font-size: 20px;
-$tablet-font-size: 18px;
-$desktop-font-size: 16px;
+$medium-font-size: calc($default-font-size - 2px);
+$large-font-size: calc($medium-font-size - 2px);
 
 @mixin responsive-font {
     font-family: $default-font-family;
     font-size: $default-font-size;
-    @include for-min-screen-size(tablet) {
-        font-size: $tablet-font-size;
+    @include for-min-screen-size(medium) {
+        font-size: $medium-font-size;
     }
-    @include for-min-screen-size(desktop) {
-        font-size: $desktop-font-size;
+    @include for-min-screen-size(large) {
+        font-size: $large-font-size;
     }
 }

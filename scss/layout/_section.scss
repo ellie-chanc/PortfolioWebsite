@@ -5,6 +5,7 @@ section {
     padding: 10vh $page-x-margin;
 
     .section-header {
+        width: 100%;
         padding: 0vh 0vw 5vh;
         @include flex(column);
 

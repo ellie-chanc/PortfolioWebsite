@@ -32,7 +32,7 @@
 
         .hamburger {
             display: block;
-            align-self: flex-start;
+            align-self: flex-end;
             cursor: pointer;
 
             .bar {
@@ -58,9 +58,9 @@
         }
     }
 
-    @include for-min-screen-size(tablet) {
+    @include for-min-screen-size(medium) {
         .top-nav {
-            @include flex(row, flex-start);
+            @include flex(row, flex-end);
     
             .top-nav-link {
                 display: inline;

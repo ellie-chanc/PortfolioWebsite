@@ -3,7 +3,7 @@
 .card-container {
     @include flex(column);
 
-    @include for-min-screen-size(tablet) {
+    @include for-min-screen-size(medium) {
         @include flex(row, center, stretch);
     }
 }

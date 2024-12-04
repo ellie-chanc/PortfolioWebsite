@@ -18,7 +18,6 @@ async function getNavLinks() {
         navLink.innerText = navObj[i+1]["nav-text"];
         navLink.addEventListener("click", toggleMenu);
 
-
         topNav.appendChild(navLink);
     }
 }

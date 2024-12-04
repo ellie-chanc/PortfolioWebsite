@@ -10,19 +10,15 @@ body {
 }
 
 #intro {
-    @include text-bg($white, $dark);
+    @include text-bg($light-grey, $dark);
     background-image: url("/img/hk-night.jpg");
     background-size: cover;
     height: 90vh;
+}
 
-    #name {
-        font-family: PlaywriteGBS, $default-font-family;
-        font-size: 2.5em;
-
-        @include for-min-screen-size(tablet) {
-            font-size: 4em;
-        }
-    }
+#name {
+    font-family: PlaywriteGBS, $default-font-family;
+    font-size: 3em;
 }
 
 #projects {
@@ -47,10 +43,6 @@ body {
 
 #courses {
     @include text-bg($extra-dark, $light-grey);
-    
-    .bookmark-container {
-        @include flex(row);
-    }
 }
 
 #contact {

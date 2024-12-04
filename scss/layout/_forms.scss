@@ -1,33 +1,33 @@
 @use "../abstracts" as *;
 @use "../base/typography" as *;
 
-form {
+form, .form-container {
     @include flex(column, center, flex-start);
     width: 100%;
     margin: auto;
     
-    input[type=text],
-    input[type=email],
-    input[type=submit],
-    textarea {
-        width: 100%;
-        border: medium solid $light-grey;
-        border-radius: $card-border-radius;
-        padding: $input-area-padding;
-        resize: none;
-        font-size: 1em;
-        font-family: $default-font-family;
-    }
-    
-    input[type=submit] {
-        font-size: 1em;
-        border: none;
-    }
-
-    @include for-min-screen-size(tablet) {
+    @include for-min-screen-size(medium) {
         width: 75%;
     }
-    @include for-min-screen-size(desktop) {
+    @include for-min-screen-size(large) {
         width: 50%;
     }
+}
+
+input[type=text],
+input[type=email],
+input[type=submit],
+textarea {
+    width: 100%;
+    border: medium solid $light-blue;
+    border-radius: $card-border-radius;
+    padding: $input-area-padding;
+    resize: none;
+    font-size: 1em;
+    font-family: $default-font-family;
+}
+
+input[type=submit] {
+    font-size: 1em;
+    border: none;
 }
