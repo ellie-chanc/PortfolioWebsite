@@ -97,13 +97,40 @@ button:hover, .button:hover {
   cursor: pointer;
 }
 
+.search-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2vh;
+  column-gap: 2vw;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+}
+@media only screen and (min-width: 48rem) {
+  .search-container {
+    width: 75%;
+  }
+}
+@media only screen and (min-width: 62rem) {
+  .search-container {
+    width: 50%;
+  }
+}
+.search-container .search-input {
+  width: auto;
+  flex: 1;
+}
+
 footer {
   padding: 5vh 5vw;
   background-color: #9ccddc;
   color: #062c43;
 }
 
-form, .form-container {
+form {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -116,12 +143,12 @@ form, .form-container {
   margin: auto;
 }
 @media only screen and (min-width: 48rem) {
-  form, .form-container {
+  form {
     width: 75%;
   }
 }
 @media only screen and (min-width: 62rem) {
-  form, .form-container {
+  form {
     width: 50%;
   }
 }

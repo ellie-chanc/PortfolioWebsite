@@ -1,0 +1,21 @@
+@use "../abstracts" as *;
+@use "../base/typography" as *;
+
+.search-container {
+    @include flex(row);
+    width: 100%;
+    margin: auto;
+
+    @include for-min-screen-size(medium) {
+        width: 75%;
+    }
+
+    @include for-min-screen-size(large) {
+        width: 50%;
+    }
+
+    .search-input {
+        width: auto;
+        flex: 1;
+    }
+}

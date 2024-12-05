@@ -1,7 +1,7 @@
 @use "../abstracts" as *;
 @use "../base/typography" as *;
 
-form, .form-container {
+form {
     @include flex(column, center, flex-start);
     width: 100%;
     margin: auto;
