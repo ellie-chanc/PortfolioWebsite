@@ -7,8 +7,16 @@ const allLink = document.querySelectorAll(".top-nav-link");
 hamburger.addEventListener("click", toggleMenu);
 
 async function getNavLinks() {
-    const navRes = await fetch("../../data/nav.json");
-    const navObj = await navRes.json();
+    let navObj = {};
+    try {
+        const navRes = await fetch("./data/nav.json");
+        navObj = await navRes.json();
+    } catch (err) {
+        console.log(`Error name: ${err.name}`);
+        console.log("Unable to get project details");
+        navObj = {};
+    }
+
     const topNav = document.querySelector(".top-nav");
 
     for (let i = 0; i < Object.keys(navObj).length; i++) {
