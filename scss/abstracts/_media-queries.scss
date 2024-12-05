@@ -1,0 +1,15 @@
+$medium-min-width: 48rem;
+$large-min-width: 62rem;
+
+@mixin for-min-screen-size($screen-size) {
+    @if $screen-size == medium {
+        @media only screen and (min-width: $medium-min-width) {
+            @content;
+        }
+    }
+    @if $screen-size == large {
+        @media only screen and (min-width: $large-min-width) {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@mixin text-bg($color: $white, $background-color: $dark) {
+    background: $background-color;
+    color: $color;
+}
+
+@mixin flex($direction: row, $justify-content: center, $align-items: center) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: wrap;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    row-gap: 2vh;
+    column-gap: 2vw;
+    text-align: center;
+}

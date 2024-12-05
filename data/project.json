@@ -1,6 +1,6 @@
 {
     "1": {
-        "img": "img/mini-game.jpg",
+        "img": "img/portfolio-website.jpg",
         "title": "Portfolio Website",
         "info": "This is a portfolio website built with HTML, CSS and Javascript.",
         "github-url": "https://github.com/ellie-chanc/PortfolioWebsite"
@@ -13,7 +13,7 @@
     },
 
     "3": {
-        "img": "img/mini-game.jpg",
+        "img": "img/coming-soon.jpg",
         "title": "Coming Soon",
         "info": "Coming soon..."
     }

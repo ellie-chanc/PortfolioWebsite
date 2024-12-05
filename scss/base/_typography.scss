@@ -1,0 +1,23 @@
+@use "../abstracts" as *;
+
+$default-font-family: sans-serif;
+
+@font-face {
+    font-family: PlaywriteGBS;
+    src: url(/font/PlaywriteGBS-VariableFont_wght.ttf);
+}
+
+$default-font-size: 20px;
+$medium-font-size: calc($default-font-size - 2px);
+$large-font-size: calc($medium-font-size - 2px);
+
+@mixin responsive-font {
+    font-family: $default-font-family;
+    font-size: $default-font-size;
+    @include for-min-screen-size(medium) {
+        font-size: $medium-font-size;
+    }
+    @include for-min-screen-size(large) {
+        font-size: $large-font-size;
+    }
+}

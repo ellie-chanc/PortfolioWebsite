@@ -1,0 +1,50 @@
+@use "../abstracts" as *;
+@use "../base/typography" as *;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @include responsive-font;
+}
+
+#intro {
+    @include text-bg($light-grey, $dark);
+    background-image: url("/img/hk-night.jpg");
+    background-size: cover;
+    height: 90vh;
+}
+
+#name {
+    font-family: PlaywriteGBS, $default-font-family;
+    font-size: 3em;
+}
+
+#projects {
+    @include text-bg($light-grey, $extra-dark);
+
+    .project-card:hover {
+        .project-github-icon {
+            animation: spin 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
+
+#courses {
+    @include text-bg($extra-dark, $light-grey);
+}
+
+#contact {
+    @include text-bg($extra-dark, $white);
+}

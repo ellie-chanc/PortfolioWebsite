@@ -1,0 +1,7 @@
+@use "../abstracts" as *;
+
+footer {
+    padding: 5vh $page-x-margin;
+    background-color: $light-blue;
+    color: $extra-dark;
+}
