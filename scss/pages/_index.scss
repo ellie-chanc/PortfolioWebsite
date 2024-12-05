@@ -11,7 +11,7 @@ body {
 
 #intro {
     @include text-bg($light-grey, $dark);
-    background-image: url("../img/hk-night.jpg");
+    background-image: url("../../img/hk-night.jpg");
     background-size: cover;
     height: 90vh;
 }

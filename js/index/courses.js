@@ -20,7 +20,7 @@ function search() {
 async function getCourses() {
     let courseListObj = {};
     try {
-        let courseListRes = await fetch("../data/course.json");
+        let courseListRes = await fetch("../../data/course.json");
         courseListObj = await courseListRes.json();
     } catch (err) {
         console.log(`Error name: ${err.name}`);
