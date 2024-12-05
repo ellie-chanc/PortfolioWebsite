@@ -4,7 +4,7 @@ await getProjects();
 async function getProjects() {
     let projectListObj = {};
     try {
-        let projectListRes = await fetch("../../data/project.json");
+        let projectListRes = await fetch("../data/project.json");
         projectListObj = await projectListRes.json();
     } catch (err) {
         console.log(`Error name: ${err.name}`);
