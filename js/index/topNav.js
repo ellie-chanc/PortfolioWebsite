@@ -7,7 +7,7 @@ const allLink = document.querySelectorAll(".top-nav-link");
 hamburger.addEventListener("click", toggleMenu);
 
 async function getNavLinks() {
-    const navRes = await fetch("data/nav.json");
+    const navRes = await fetch("../../data/nav.json");
     const navObj = await navRes.json();
     const topNav = document.querySelector(".top-nav");
 
