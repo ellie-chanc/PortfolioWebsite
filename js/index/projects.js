@@ -15,15 +15,18 @@ async function getProjects() {
     let projectContainer = document.querySelector("#project-container");
     for (let i = 1; i <= Object.keys(projectListObj).length; i++) {
         let projectImg = `<img class="project-img card-img" src="${projectListObj[i]["img"]}" alt="${projectListObj[i]["title"]} Demo">`;
-        let projectTitle = `<h2 class="project-title card-title">${projectListObj[i]["title"]}</h2>`;
+        const projectTitle = `<h2 class="project-title card-title">${projectListObj[i]["title"]}</h2>`;
+        const projectGithubLink = "github-url" in projectListObj[i] ? `<a href="${projectListObj[i]["github-url"]}" target="_blank" class="project-github-link button">Go to Github <i class="project-github-icon fa-brands fa-github"></i></a>` : "";
+        let projectCard = ``;
+
         let projectInfo = ``;
         if (projectListObj[i]["info"].length > 50) {
             projectInfo = `<p class="project-info">${projectListObj[i]["info"].substring(0, 50)}... <a class="project-show-more show-more-link hide">Show More</a></p>`;
         } else {
             projectInfo = `<p class="project-info">${projectListObj[i]["info"]}</p>`;
         }
-        let projectGithubLink = "github-url" in projectListObj[i] ? `<a href="${projectListObj[i]["github-url"]}" target="_blank" class="project-github-link button">Go to Github <i class="project-github-icon fa-brands fa-github"></i></a>` : "";
-        let projectCard = `<article class="project-card card">${projectImg + projectTitle + projectInfo}<div class="card-footer">${projectGithubLink}</div></article>`;
+
+        projectCard = `<article class="project-card card">${projectImg + projectTitle + projectInfo}<div class="card-footer">${projectGithubLink}</div></article>`;
         
         projectContainer.innerHTML += projectCard;
     }

@@ -30,5 +30,29 @@
     "8": {
         "title": "JavaScript Fundamentals",
         "url": "https://www.pluralsight.com/library/courses/fundamentals-javascript/"
+    },
+    "9": {
+        "title": "JavaScript in the Browser",
+        "url": "https://www.pluralsight.com/courses/javascript-browser#:~:text=In%20this%20course%2C%20JavaScript%20in,handle%20HTML%20forms%20with%20JavaScript."
+    },
+    "10": {
+        "title": "Arrays and Objects in JavaScript",
+        "url": "https://www.pluralsight.com/courses/javascript-arrays-objects"
+    },
+    "11": {
+        "title": "Error Handling in JavaScript",
+        "url": "https://www.pluralsight.com/courses/javascript-error-handling"
+    },
+    "12": {
+        "title": "Hands-on Responsive Web Design 1: Media Queries & CSS Preprocessing",
+        "url": "https://www.pluralsight.com/courses/responsive-web-design-media-queries-css-preprocessing"
+    },
+    "13": {
+        "title": "Hands-on Responsive Web Design 3: Columns, Flexbox, and Grids",
+        "url": "https://www.pluralsight.com/courses/responsive-web-design-columns-flexbox-grids"
+    },
+    "14": {
+        "title": "Functions in JavaScript",
+        "url": "https://www.pluralsight.com/courses/functions-javascript"
     }
 }
