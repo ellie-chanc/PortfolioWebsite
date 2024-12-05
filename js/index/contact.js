@@ -1,4 +1,4 @@
-import SpecialCharacterError from "/js/exceptions/special-character-exception.js";
+import SpecialCharacterError from "../exceptions/special-character-exception.js";
 
 const contactFormInputs = document.querySelector("#contact-form").elements;
 const specialCharacters = /[\/:*?"<>|!$%]+/;

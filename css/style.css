@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: PlaywriteGBS;
-  src: url(/font/PlaywriteGBS-VariableFont_wght.ttf);
+  src: url(../../font/PlaywriteGBS-VariableFont_wght.ttf);
 }
 button, .button {
   background: #062c43;
@@ -266,7 +266,7 @@ body {
 #intro {
   background: #054569;
   color: #ced7e0;
-  background-image: url("/img/hk-night.jpg");
+  background-image: url("../../img/hk-night.jpg");
   background-size: cover;
   height: 90vh;
 }
