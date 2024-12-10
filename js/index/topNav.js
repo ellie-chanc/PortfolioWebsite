@@ -1,39 +1,44 @@
-await getNavLinks();
+getNavLinks();
 
-
-const hamburger = document.querySelector(".hamburger");
-const allLink = document.querySelectorAll(".top-nav-link");
-
-hamburger.addEventListener("click", toggleMenu);
 
 async function getNavLinks() {
-    let navObj = {};
+    const navLinksData = await getNavLinksData();
+    generateNavLinksHtml(navLinksData);
+    addToggleNavMenuListener();
+}
+
+
+async function getNavLinksData() {
     try {
         const navRes = await fetch("./data/nav.json");
-        navObj = await navRes.json();
+        const navObj = await navRes.json();
+        return navObj;
     } catch (err) {
         console.log(`Error name: ${err.name}`);
-        console.log("Unable to get project details");
-        navObj = {};
-    }
-
-    const topNav = document.querySelector(".top-nav");
-
-    for (let i = 0; i < Object.keys(navObj).length; i++) {
-        let navLink = document.createElement("a");
-        navLink.classList.add("top-nav-item", "top-nav-link");
-        navLink.setAttribute("href", navObj[i+1]["nav-link"]);
-        navLink.innerText = navObj[i+1]["nav-text"];
-        navLink.addEventListener("click", toggleMenu);
-
-        topNav.appendChild(navLink);
+        console.log("Unable to get navigation links.");
+        return {};
     }
 }
 
 
-function toggleMenu(event) {
-    hamburger.classList.toggle("active");
-    for (let i = 0; i < allLink.length; i++) {
-        allLink[i].classList.toggle("active");
+function generateNavLinksHtml(navLinksData) {
+    const topNav = document.querySelector(".top-nav");
+
+    for (const i in navLinksData) {
+        const navLink = `<a class="top-nav-item top-nav-link" href="${navLinksData[i]["nav-link"]}">${navLinksData[i]["nav-text"]}</a>`;
+        topNav.innerHTML += navLink;
     }
+}
+
+
+function addToggleNavMenuListener() {
+    const topNavItems = document.querySelectorAll(".top-nav-item");
+    
+    topNavItems.forEach((i) => {
+        i.addEventListener("click", () => {
+            topNavItems.forEach((j) => {
+                j.classList.toggle("active");
+            })
+        })
+    });
 }

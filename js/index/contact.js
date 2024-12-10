@@ -1,15 +1,23 @@
 import SpecialCharacterError from "../exceptions/special-character-exception.js";
 
-const contactFormInputs = document.querySelector("#contact-form").elements;
-const specialCharacters = /[\/:*?"<>|!$%]+/;
 
-for (let i = 0; i < contactFormInputs.length; i++) {
-    contactFormInputs[i].addEventListener("input", (event) => {
-        alertSpecialCharacters(event.currentTarget);
+validateContactForm();
+
+
+function validateContactForm() {
+    const contactFormInputs = document.forms["contact-form"].querySelectorAll("input, textarea");
+
+    contactFormInputs.forEach((i) => {
+        i.addEventListener("input", (event) => {
+            alertSpecialCharacters(event.currentTarget);
+        });
     });
 }
 
+
 function alertSpecialCharacters(element) {
+    const specialCharacters = /[\\/:*?"<>|!$%=]+/;
+
     try {
         if (specialCharacters.test(element.value)) {
             throw new SpecialCharacterError;
@@ -22,4 +30,3 @@ function alertSpecialCharacters(element) {
         element.setCustomValidity("Cannot contain special characters.");
     }
 }
-
