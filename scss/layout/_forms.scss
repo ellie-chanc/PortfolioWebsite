@@ -31,3 +31,12 @@ input[type=submit] {
     font-size: 1em;
     border: none;
 }
+
+::placeholder {
+    color: $light-grey;
+}
+
+.char-counter {
+    align-self: flex-end;
+    color: $light-grey;
+}

@@ -2,6 +2,17 @@ import SpecialCharacterError from "../exceptions/special-character-exception.js"
 
 
 validateContactForm();
+addMessageCharCounterListener();
+
+function addMessageCharCounterListener() {
+    const message = document.querySelector("#contact-form-message");
+    const counter = document.querySelector("#contact-form-message-char-counter");
+
+    message.addEventListener("keyup", () => {
+        counter.innerText = `${message.value.length}/200`;
+    });
+}
+
 
 
 function validateContactForm() {

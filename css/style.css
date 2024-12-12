@@ -171,6 +171,15 @@ input[type=submit] {
   border: none;
 }
 
+::placeholder {
+  color: #ced7e0;
+}
+
+.char-counter {
+  align-self: flex-end;
+  color: #ced7e0;
+}
+
 section {
   display: flex;
   flex-direction: column;
